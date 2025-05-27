@@ -1,0 +1,94 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<footer class="bg-neutral-light border-t border-neutral/20 py-12">
+    <div class="container mx-auto px-4 max-w-6xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+            <!-- Brand & Slogan -->
+            <div>
+                <h3 class="font-heading text-2xl font-bold mb-4 text-neutral-dark tracking-tight">
+                    Imprecali
+                </h3>
+                <p class="font-sans text-lg mb-3 text-neutral-dark/90">
+                    Tipografía & Litografía en Cali
+                </p>
+                <p class="font-sans text-sm text-neutral/80 leading-relaxed max-w-xs">
+                    Tu visión impresa. Calidad y experiencia en cada detalle.
+                </p>
+                <div class="flex gap-5 mt-6">
+                    <a href="#" class="text-neutral hover:text-primary transition-colors" aria-label="Facebook">
+                        <Icon name="facebook" size={20} />
+                    </a>
+                    <a href="#" class="text-neutral hover:text-primary transition-colors" aria-label="Instagram">
+                        <Icon name="instagram" size={20} />
+                    </a>
+                </div>
+            </div>
+
+            <!-- Navegación -->
+            <div>
+                <h4 class="font-heading text-lg font-bold mb-5 text-neutral-dark">Navegación</h4>
+                <ul class="flex flex-col gap-3 font-sans text-neutral-dark/80">
+                    <li>
+                        <a href="#inicio" class="hover:text-primary transition-colors">
+                            Inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#servicios" class="hover:text-primary transition-colors">
+                            Servicios
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#portafolio" class="hover:text-primary transition-colors">
+                            Portafolio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#por-que-elegirnos" class="hover:text-primary transition-colors">
+                            Nosotros
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#cta-final" class="hover:text-primary transition-colors">
+                            Contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Contacto -->
+            <div>
+                <h4 class="font-heading text-lg font-bold mb-5 text-neutral-dark">Contacto</h4>
+                <div class="flex items-center gap-3 mb-4">
+                    <Icon name="phone" size={18} class="text-primary" />
+                    <span class="font-sans text-neutral-dark/80">+57 300 123 4567</span>
+                </div>
+                <div class="flex items-center gap-3 mb-4">
+                    <Icon name="map-marker" size={18} class="text-primary" />
+                    <span class="font-sans text-neutral-dark/80 text-sm">Cra. 8 #21-45, San Nicolás, Cali</span>
+                </div>
+                <a 
+                    href="https://wa.me/573001234567"
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center gap-3 px-4 py-2 mt-2 border border-green-500/30 rounded-md hover:bg-green-500/5 transition-colors"
+                >
+                    <Icon name="whatsapp" size={18} class="text-secondary" />
+                    <span class="font-sans text-sm text-neutral-dark/90">Escríbenos por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="border-t border-neutral/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-sm text-neutral/70 font-sans">
+                © Imprecali {new Date().getFullYear()}. Todos los derechos reservados.
+            </div>
+            <div class="text-sm text-neutral/70 font-sans">
+                <a href="#" class="hover:text-primary mr-6 transition-colors">Términos</a>
+                <a href="#" class="hover:text-primary transition-colors">Privacidad</a>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,16 +1,52 @@
 ---
-
+import "../styles/global.css";
+import Hero from "../components/Hero.astro";
+import Services from "../components/Services.astro";
+import PorQueElegirnos from "../components/PorQueElegirnos.astro";
+import Portafolio from "../components/Portafolio.astro";
+import Testimonial from "../components/Testimonial.astro";
+import CTA from "../components/CTA.astro";
+import Navbar from "../shared/Navbar.astro";
+import Footer from "../shared/Footer.astro";
+import WhatsappButton from "../components/WhatsappButton.astro";
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Imprenta y Litografía en Cali | Imprecali</title>
 	</head>
-	<body>
-		<h1>Astro</h1>
+	<body class="bg-gray-50 text-gray-900 font-sans">
+		<Navbar />
+		<Hero />
+		<Services />
+		<PorQueElegirnos />
+		<Portafolio />
+		<Testimonial />
+		<CTA />
+		<WhatsappButton />
+		<Footer />
 	</body>
 </html>
+
+<style>
+	html,
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		scroll-behavior: smooth;
+	}
+</style>

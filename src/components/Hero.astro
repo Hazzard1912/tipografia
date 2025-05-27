@@ -1,0 +1,100 @@
+---
+import { Image } from "astro:assets";
+---
+
+<!-- Hero Section -->
+<section
+    class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-blue-900 to-indigo-800"
+    id="inicio"
+>
+    <!-- Modern background with overlay -->
+    <div
+        class="absolute inset-0 w-full h-full bg-cover bg-center"
+        style="background-image: url('https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop'); filter: brightness(0.4);"
+    >
+    </div>
+    
+    <!-- Paper texture overlay -->
+    <div
+        class="absolute inset-0 w-full h-full bg-[url('/paper-texture.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none"
+    >
+    </div>
+    
+    <div
+        class="relative z-10 flex flex-col items-center text-center px-6 py-20 gap-8 max-w-5xl mx-auto"
+    >
+        <h1
+            id="hero-title"
+            class="font-heading text-5xl md:text-7xl font-bold text-white drop-shadow-md mb-2 tracking-tight mt-4"
+        >
+            Tu Impacto Visual <span class="text-indigo-300">Comienza Aquí.</span>
+        </h1>
+        <p
+            id="hero-subtitle"
+            class="font-sans text-xl md:text-2xl text-gray-100 max-w-3xl mb-10 leading-relaxed"
+        >
+            Más de <span class="font-bold text-indigo-300">20</span> años transformando ideas en
+            realidad impresa en el corazón de Cali. Diseño, Tipografía y Litografía
+            de vanguardia para tu negocio.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+            <a
+                href="#contacto"
+                id="cta-principal"
+                class="bg-indigo-500 text-white py-4 px-10 rounded-lg text-lg font-bold hover:bg-indigo-600 transition-all duration-300 shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 transform hover:-translate-y-1 relative overflow-hidden"
+            >
+                Cotiza tu Proyecto Ahora
+                <span
+                    class="absolute left-0 top-0 w-full h-full pointer-events-none opacity-0 transition-opacity duration-300"
+                    id="cta-glow"></span>
+            </a>
+            <a
+                href="#servicios"
+                class="text-white border-2 border-white py-4 px-10 rounded-lg text-lg hover:bg-white hover:text-indigo-800 transition-all duration-300 transform hover:-translate-y-1"
+            >
+                Explora Nuestros Servicios
+            </a>
+        </div>
+        <p class="mt-10 text-indigo-200 italic text-lg font-light">
+            "Tu visión impresa. Calidad y experiencia en cada detalle."
+        </p>
+    </div>
+    
+    <!-- Decorative elements -->
+    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
+</section>
+
+<script>
+    if (typeof window !== "undefined") {
+        import("gsap").then(({ default: gsap }) => {
+            gsap.from("#hero-title", {
+                y: 60,
+                opacity: 0,
+                duration: 1.2,
+                ease: "power3.out",
+            });
+            gsap.from("#hero-subtitle", {
+                y: 40,
+                opacity: 0,
+                duration: 1,
+                delay: 0.4,
+                ease: "power3.out",
+            });
+            gsap.from(".flex.flex-col.sm\\:flex-row", {
+                y: 30,
+                opacity: 0,
+                duration: 1,
+                delay: 0.7,
+                ease: "power2.out",
+            });
+            gsap.to("#cta-principal", {
+                boxShadow: "0 0 25px 0 rgba(99,102,241,0.6)",
+                repeat: -1,
+                yoyo: true,
+                duration: 1.8,
+                ease: "sine.inOut",
+                delay: 1.5,
+            });
+        });
+    }
+</script>

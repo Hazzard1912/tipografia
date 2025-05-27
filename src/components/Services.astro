@@ -1,0 +1,299 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+import businessCards from "../assets/business-cards.jpg";
+import stamp from "../assets/stamp.jpg";
+import creativeDesign from "../assets/creative.jpg";
+---
+
+<section
+    id="servicios"
+    class="relative py-32 bg-gradient-to-b from-neutral-100 to-white"
+>
+    <div class="container mx-auto px-4 max-w-6xl">
+        <h2
+            class="font-heading text-4xl md:text-5xl font-bold text-neutral-dark text-center mb-4"
+        >
+            Soluciones de Impresión que Impulsan tu Marca
+        </h2>
+        <p class="text-center text-neutral-600 max-w-3xl mx-auto mb-16 text-lg">
+            Servicios profesionales diseñados para hacer crecer tu negocio y
+            fortalecer tu identidad corporativa.
+        </p>
+
+        <div
+            id="services-grid"
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+            <div
+                class="service-card group overflow-hidden rounded-2xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl"
+            >
+                <div class="relative h-48 overflow-hidden">
+                    <Image
+                        src={businessCards}
+                        alt="Tarjetas de Presentación"
+                        width={600}
+                        height={400}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <span
+                        class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-md text-secondary"
+                    >
+                        <Icon
+                            name="card-account-details-outline"
+                            width="24"
+                            height="24"
+                        />
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h3
+                        class="font-heading text-2xl font-bold mb-3 text-neutral-800"
+                    >
+                        Identidad Corporativa Impecable
+                    </h3>
+                    <p class="font-sans text-neutral-600 text-lg mb-4">
+                        Desde tarjetas de presentación que dejan huella hasta
+                        papelería que eleva tu marca, creamos una identidad
+                        profesional coherente y memorable.
+                    </p>
+                    <a
+                        href="/servicios/identidad-corporativa"
+                        class="inline-flex items-center text-primary font-medium"
+                    >
+                        Conocer más <Icon
+                            name="arrow-right"
+                            width="16"
+                            height="16"
+                            class="ml-1 transition-transform group-hover:translate-x-1"
+                        />
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="service-card group overflow-hidden rounded-2xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl"
+            >
+                <div class="relative h-48 overflow-hidden">
+                    <Image
+                        src={stamp}
+                        alt="Sellos Personalizados"
+                        width={600}
+                        height={400}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <span
+                        class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-md text-accent"
+                    >
+                        <Icon name="stamper" width="24" height="24" />
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h3
+                        class="font-heading text-2xl font-bold mb-3 text-neutral-800"
+                    >
+                        Sellos Personalizados
+                    </h3>
+                    <p class="font-sans text-neutral-600 text-lg mb-4">
+                        Sellos automáticos y manuales para tu empresa, con
+                        calidad y rapidez, ideales para tu gestión diaria.
+                    </p>
+                    <a
+                        href="/servicios/sellos"
+                        class="inline-flex items-center text-accent font-medium"
+                    >
+                        Conocer más <Icon
+                            name="arrow-right"
+                            width="16"
+                            height="16"
+                            class="ml-1 transition-transform group-hover:translate-x-1"
+                        />
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="service-card group overflow-hidden rounded-2xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl"
+            >
+                <div class="relative h-48 overflow-hidden">
+                    <Image
+                        src="https://images.unsplash.com/photo-1586282391129-76a6df230234?ixlib=rb-4.0.3&auto=format&fit=crop"
+                        alt="Talonarios y Formularios"
+                        width={600}
+                        height={400}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <span
+                        class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-md text-primary"
+                    >
+                        <Icon name="receipt-outline" width="24" height="24" />
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h3
+                        class="font-heading text-2xl font-bold mb-3 text-neutral-800"
+                    >
+                        Talonarios y Formularios
+                    </h3>
+                    <p class="font-sans text-neutral-600 text-lg mb-4">
+                        Talonarios, facturas y recibos personalizados para tu
+                        negocio, con impresión nítida y materiales de alta
+                        calidad.
+                    </p>
+                    <a
+                        href="/servicios/talonarios"
+                        class="inline-flex items-center text-primary font-medium"
+                    >
+                        Conocer más <Icon
+                            name="arrow-right"
+                            width="16"
+                            height="16"
+                            class="ml-1 transition-transform group-hover:translate-x-1"
+                        />
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="service-card group overflow-hidden rounded-2xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl"
+            >
+                <div class="relative h-48 overflow-hidden">
+                    <Image
+                        src="https://images.unsplash.com/photo-1569098644584-210bcd375b59?ixlib=rb-4.0.3&auto=format&fit=crop"
+                        alt="Pendones y Publicidad"
+                        width={600}
+                        height={400}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <span
+                        class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-md text-secondary-dark"
+                    >
+                        <Icon name="billboard" width="24" height="24" />
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h3
+                        class="font-heading text-2xl font-bold mb-3 text-neutral-800"
+                    >
+                        Pendones y Publicidad
+                    </h3>
+                    <p class="font-sans text-neutral-600 text-lg mb-4">
+                        Pendones, banners y material publicitario para destacar
+                        tu marca en cualquier evento o espacio.
+                    </p>
+                    <a
+                        href="/servicios/pendones"
+                        class="inline-flex items-center text-secondary-dark font-medium"
+                    >
+                        Conocer más <Icon
+                            name="arrow-right"
+                            width="16"
+                            height="16"
+                            class="ml-1 transition-transform group-hover:translate-x-1"
+                        />
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="service-card group overflow-hidden rounded-2xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl"
+            >
+                <div class="relative h-48 overflow-hidden">
+                    <Image
+                        src={creativeDesign}
+                        alt="Diseño Gráfico Creativo"
+                        width={600}
+                        height={400}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <span
+                        class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-md text-accent-dark"
+                    >
+                        <Icon name="palette-outline" width="24" height="24" />
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h3
+                        class="font-heading text-2xl font-bold mb-3 text-neutral-800"
+                    >
+                        Diseño Gráfico Creativo
+                    </h3>
+                    <p class="font-sans text-neutral-600 text-lg mb-4">
+                        Soluciones de diseño gráfico para potenciar la imagen de
+                        tu empresa y comunicar tu mensaje de forma efectiva.
+                    </p>
+                    <a
+                        href="/servicios/diseno"
+                        class="inline-flex items-center text-accent-dark font-medium"
+                    >
+                        Conocer más <Icon
+                            name="arrow-right"
+                            width="16"
+                            height="16"
+                            class="ml-1 transition-transform group-hover:translate-x-1"
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-16">
+            <a
+                href="/servicios"
+                class="bg-primary text-white py-4 px-10 rounded-full text-lg font-bold hover:bg-primary-dark transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center"
+            >
+                Ver Todos los Servicios
+                <Icon name="arrow-right" width="20" height="20" class="ml-2" />
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    if (typeof window !== "undefined") {
+        import("gsap").then(({ default: gsap }) => {
+            import("gsap/ScrollTrigger").then(({ default: ScrollTrigger }) => {
+                gsap.registerPlugin(ScrollTrigger);
+
+                // Card animation on scroll
+                gsap.utils.toArray(".service-card").forEach((card, i) => {
+                    gsap.from(card, {
+                        scrollTrigger: {
+                            trigger: card,
+                            start: "top 85%",
+                        },
+                        y: 50,
+                        opacity: 0,
+                        duration: 0.9,
+                        delay: i * 0.15,
+                        ease: "power3.out",
+                    });
+                });
+
+                // Image hover effect
+                gsap.utils.toArray(".service-card").forEach((card) => {
+                    const image = card.querySelector("img");
+                    const icon = card.querySelector(".absolute span");
+
+                    card.addEventListener("mouseenter", () => {
+                        gsap.to(icon, {
+                            scale: 1.15,
+                            rotate: 8,
+                            duration: 0.3,
+                            ease: "power1.out",
+                        });
+                    });
+
+                    card.addEventListener("mouseleave", () => {
+                        gsap.to(icon, {
+                            scale: 1,
+                            rotate: 0,
+                            duration: 0.3,
+                            ease: "power1.in",
+                        });
+                    });
+                });
+            });
+        });
+    }
+</script>
