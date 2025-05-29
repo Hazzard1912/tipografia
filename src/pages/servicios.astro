@@ -1,0 +1,160 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const keywords = [
+    "categorías productos",
+    "sellos Cali",
+    "papelería comercial",
+    "señalética",
+    "imprenta Cali",
+    "productos impresión",
+    "Jose Albeiro Hernández",
+];
+---
+
+<Layout
+    title="Categorías de Productos | Sellos, Papelería y Señalética - Imprecali"
+    metaTitle="Categorías de Productos - Sellos, Papelería y Señalética | Imprecali"
+    description="Explora nuestras categorías de productos: sellos personalizados, papelería comercial y señalética. Encuentra la solución perfecta para tu negocio en Cali."
+    url="https://www.imprecali.com/categorias"
+    canonical="https://www.imprecali.com/categorias"
+    keywords={keywords}
+>
+    <section class="max-w-6xl mx-auto py-12 px-4 mt-20">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold mb-4 text-gray-900">
+                Nuestras Categorías de Productos
+            </h1>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                Descubre nuestra amplia gama de productos y servicios de
+                impresión. Cada categoría está diseñada para satisfacer las
+                necesidades específicas de tu negocio o proyecto personal.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Categoría Sellos -->
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=500&q=80"
+                    alt="Sellos personalizados"
+                    class="w-full h-48 object-cover"
+                    loading="lazy"
+                />
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold mb-3 text-gray-900">
+                        Sellos
+                    </h2>
+                    <p class="text-gray-600 mb-4">
+                        Sellos personalizados de alta calidad: SIREL, láser,
+                        automáticos, madera y carril. Ideales para oficinas,
+                        empresas y uso personal.
+                    </p>
+                    <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                        <li>• Sellos SIREL</li>
+                        <li>• Sellos Láser</li>
+                        <li>• Sellos Automáticos</li>
+                        <li>• Sellos de Madera</li>
+                        <li>• Sellos de Carril</li>
+                    </ul>
+                    <a
+                        href="/servicios/sellos"
+                        class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+                    >
+                        Ver Sellos
+                    </a>
+                </div>
+            </div>
+
+            <!-- Categoría Papelería Comercial -->
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80"
+                    alt="Papelería comercial"
+                    class="w-full h-48 object-cover"
+                    loading="lazy"
+                />
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold mb-3 text-gray-900">
+                        Papelería Comercial
+                    </h2>
+                    <p class="text-gray-600 mb-4">
+                        Soluciones completas en papelería comercial para tu
+                        empresa. Desde tarjetas de presentación hasta material
+                        promocional.
+                    </p>
+                    <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                        <li>• Talonarios</li>
+                        <li>• Tarjetas de Presentación</li>
+                        <li>• Pendones</li>
+                        <li>• Afiches y Volantes</li>
+                        <li>• Material Promocional</li>
+                    </ul>
+                    <a
+                        href="/servicios/papeleria-comercial"
+                        class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+                    >
+                        Ver Papelería
+                    </a>
+                </div>
+            </div>
+
+            <!-- Categoría Señalética -->
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+                <img
+                    src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=500&q=80"
+                    alt="Señalética"
+                    class="w-full h-48 object-cover"
+                    loading="lazy"
+                />
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold mb-3 text-gray-900">
+                        Señalética
+                    </h2>
+                    <p class="text-gray-600 mb-4">
+                        Señalización profesional en poliestireno y acrílico.
+                        Perfecta para oficinas, comercios y espacios
+                        corporativos.
+                    </p>
+                    <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                        <li>• Señalética en Poliestireno</li>
+                        <li>• Señalética en Acrílico</li>
+                        <li>• Señalización Corporativa</li>
+                        <li>• Placas Identificativas</li>
+                        <li>• Señalización Direccional</li>
+                    </ul>
+                    <a
+                        href="/servicios/senaletica"
+                        class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors"
+                    >
+                        Ver Señalética
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-16 text-center bg-gray-100 rounded-lg p-8">
+            <h3 class="text-2xl font-semibold mb-4 text-gray-900">
+                ¿No encuentras lo que buscas?
+            </h3>
+            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                Ofrecemos soluciones personalizadas para cada proyecto.
+                Contáctanos y te ayudamos a encontrar el producto perfecto para
+                tus necesidades.
+            </p>
+            <a
+                href="/contacto"
+                class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors font-semibold"
+            >
+                Contactar Ahora
+            </a>
+        </div>
+    </section>
+</Layout>
