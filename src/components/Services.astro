@@ -3,7 +3,9 @@ import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import businessCards from "../assets/business-cards.jpg";
 import stamp from "../assets/stamp.jpg";
-import creativeDesign from "../assets/creative.jpg";
+import senaleticaPolystyrene from "../assets/senaletica-acrilico.jpg";
+import talonarios from "../assets/SERVICIOS_PRESENTACION_NEGOCIO.png";
+import pendones from "../assets/PENDON_1-removebg-preview.png";
 ---
 
 <section
@@ -58,7 +60,7 @@ import creativeDesign from "../assets/creative.jpg";
                         profesional coherente y memorable.
                     </p>
                     <a
-                        href="/servicios/identidad-corporativa"
+                        href="/servicios/papeleria-comercial"
                         class="inline-flex items-center text-primary font-medium"
                     >
                         Conocer más <Icon
@@ -117,7 +119,7 @@ import creativeDesign from "../assets/creative.jpg";
             >
                 <div class="relative h-48 overflow-hidden">
                     <Image
-                        src="https://images.unsplash.com/photo-1586282391129-76a6df230234?ixlib=rb-4.0.3&auto=format&fit=crop"
+                        src={talonarios}
                         alt="Talonarios y Formularios"
                         width={600}
                         height={400}
@@ -141,7 +143,7 @@ import creativeDesign from "../assets/creative.jpg";
                         calidad.
                     </p>
                     <a
-                        href="/servicios/talonarios"
+                        href="/servicios/papeleria-comercial"
                         class="inline-flex items-center text-primary font-medium"
                     >
                         Conocer más <Icon
@@ -159,7 +161,7 @@ import creativeDesign from "../assets/creative.jpg";
             >
                 <div class="relative h-48 overflow-hidden">
                     <Image
-                        src="https://images.unsplash.com/photo-1569098644584-210bcd375b59?ixlib=rb-4.0.3&auto=format&fit=crop"
+                        src={pendones}
                         alt="Pendones y Publicidad"
                         width={600}
                         height={400}
@@ -182,7 +184,7 @@ import creativeDesign from "../assets/creative.jpg";
                         tu marca en cualquier evento o espacio.
                     </p>
                     <a
-                        href="/servicios/pendones"
+                        href="/servicios/papeleria-comercial"
                         class="inline-flex items-center text-secondary-dark font-medium"
                     >
                         Conocer más <Icon
@@ -200,8 +202,8 @@ import creativeDesign from "../assets/creative.jpg";
             >
                 <div class="relative h-48 overflow-hidden">
                     <Image
-                        src={creativeDesign}
-                        alt="Diseño Gráfico Creativo"
+                        src={senaleticaPolystyrene}
+                        alt="Señalética y Polystyrene"
                         width={600}
                         height={400}
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -209,21 +211,20 @@ import creativeDesign from "../assets/creative.jpg";
                     <span
                         class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-md text-accent-dark"
                     >
-                        <Icon name="palette-outline" width="24" height="24" />
+                        <Icon name="sign-direction" width="24" height="24" />
                     </span>
                 </div>
                 <div class="p-6">
                     <h3
                         class="font-heading text-2xl font-bold mb-3 text-neutral-800"
                     >
-                        Diseño Gráfico Creativo
+                        Señalética y Polystyrene
                     </h3>
                     <p class="font-sans text-neutral-600 text-lg mb-4">
-                        Soluciones de diseño gráfico para potenciar la imagen de
-                        tu empresa y comunicar tu mensaje de forma efectiva.
+                        Señales informativas, direccionales y decorativas en diversos materiales para identificar y comunicar de manera efectiva.
                     </p>
                     <a
-                        href="/servicios/diseno"
+                        href="/servicios/senaletica"
                         class="inline-flex items-center text-accent-dark font-medium"
                     >
                         Conocer más <Icon

@@ -1,5 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+
+import senaleticaPolystyrene from "../assets/senaletica.png";
+import afiches from "../assets/a4-paper-flyer-mockup-psd-template.jpg";
+import cyrel from "../assets/cyrel.webp";
 
 const keywords = [
     "categorías productos",
@@ -37,23 +42,28 @@ const keywords = [
             <div
                 class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-                <img
-                    src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=500&q=80"
+                <Image
+                    src={cyrel}
                     alt="Sellos personalizados"
                     class="w-full h-48 object-cover"
+                    width={500}
+                    height={192}
                     loading="lazy"
+                    format="webp"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style="aspect-ratio: 500/192;"
                 />
                 <div class="p-6">
                     <h2 class="text-2xl font-semibold mb-3 text-gray-900">
                         Sellos
                     </h2>
                     <p class="text-gray-600 mb-4">
-                        Sellos personalizados de alta calidad: SIREL, láser,
+                        Sellos personalizados de alta calidad: Cyrel, láser,
                         automáticos, madera y carril. Ideales para oficinas,
                         empresas y uso personal.
                     </p>
                     <ul class="text-sm text-gray-500 mb-4 space-y-1">
-                        <li>• Sellos SIREL</li>
+                        <li>• Sellos Cyrel</li>
                         <li>• Sellos Láser</li>
                         <li>• Sellos Automáticos</li>
                         <li>• Sellos de Madera</li>
@@ -72,11 +82,16 @@ const keywords = [
             <div
                 class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-                <img
-                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=500&q=80"
+                <Image
+                    src={afiches}
                     alt="Papelería comercial"
                     class="w-full h-48 object-cover"
+                    width={500}
+                    height={192}
                     loading="lazy"
+                    format="jpg"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style="aspect-ratio: 500/192;"
                 />
                 <div class="p-6">
                     <h2 class="text-2xl font-semibold mb-3 text-gray-900">
@@ -107,11 +122,16 @@ const keywords = [
             <div
                 class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
-                <img
-                    src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=500&q=80"
+                <Image
+                    src={senaleticaPolystyrene}
                     alt="Señalética"
                     class="w-full h-48 object-cover"
+                    width={500}
+                    height={192}
                     loading="lazy"
+                    format="png"
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    style="aspect-ratio: 500/192;"
                 />
                 <div class="p-6">
                     <h2 class="text-2xl font-semibold mb-3 text-gray-900">
