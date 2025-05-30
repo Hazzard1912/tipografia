@@ -10,6 +10,7 @@ import afiches from "../../assets/a4-paper-flyer-mockup-psd-template.jpg";
 import etiquetas from "../../assets/ETIQUETAS.png";
 import carpetas from "../../assets/carpetas.jpg";
 import catalogos from "../../assets/catalogos.webp";
+import manillas from "../../assets/MANILLAS.png";
 
 const keywords = [
     "papelería comercial Cali",
@@ -21,6 +22,7 @@ const keywords = [
     "impresión comercial Cali",
     "material promocional",
     "branding empresarial",
+    "manillas para eventos",
     "Jose Albeiro Hernández",
 ];
 
@@ -34,6 +36,7 @@ const etiquetasList = [
     "Catálogos",
     "Carpetas",
     "Etiquetas",
+    "Manillas",
     "Impresión",
     "Branding",
     "Cali",
@@ -43,7 +46,7 @@ const etiquetasList = [
 <Layout
     title="Papelería Comercial en Cali | Talonarios, Tarjetas, Pendones y más"
     metaTitle="Papelería Comercial en Cali - Talonarios, Tarjetas, Pendones | Albeiro Hernández"
-    description="Papelería comercial de alta calidad en Cali: talonarios, tarjetas de presentación, pendones, afiches, volantes y más. Impresión profesional y atención personalizada."
+    description="Papelería comercial de alta calidad en Cali: talonarios, tarjetas de presentación, pendones, afiches, volantes, manillas para eventos y más. Impresión profesional y atención personalizada."
     url="https://www.albeirohernandez.com/categorias/papeleria-comercial"
     canonical="https://www.albeirohernandez.com/categorias/papeleria-comercial"
     keywords={keywords}
@@ -159,7 +162,7 @@ const etiquetasList = [
                     <Image
                         src={pendones}
                         alt="Pendones publicitarios"
-                        class="w-full h-48 object-cover"
+                        class="w-full h-48 object-contain"
                         width={400}
                         height={192}
                         loading="lazy"
@@ -348,6 +351,47 @@ const etiquetasList = [
                         <li>• Impresión a color</li>
                         <li>• Materiales resistentes</li>
                         <li>• Para productos y envíos</li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Manillas para Eventos -->
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+            >
+                <div class="relative">
+                    <Image
+                        src={manillas}
+                        alt="Manillas para eventos personalizadas"
+                        class="w-full h-48 object-contain"
+                        width={400}
+                        height={192}
+                        loading="lazy"
+                        format="webp"
+                        sizes="(max-width: 768px) 100vw, 400px"
+                        style="aspect-ratio: 400/192;"
+                    />
+                    <span
+                        class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-md text-red-600"
+                    >
+                        <Icon name="account-tie" width="24" height="24" />
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h2 class="text-2xl font-semibold mb-3 text-gray-900">
+                        Manillas para Eventos
+                    </h2>
+                    <p class="text-gray-600 mb-4">
+                        Controla el acceso y promociona tu marca con manillas
+                        personalizadas para eventos. Materiales duraderos,
+                        diseños únicos y sistemas de seguridad que garantizan
+                        una experiencia inolvidable.
+                    </p>
+                    <ul class="text-sm text-gray-500 mb-4 space-y-1">
+                        <li>• Control de acceso</li>
+                        <li>• Materiales resistentes</li>
+                        <li>• Diseños personalizados</li>
+                        <li>• Múltiples colores</li>
+                        <li>• Sistemas de seguridad</li>
                     </ul>
                 </div>
             </div>
