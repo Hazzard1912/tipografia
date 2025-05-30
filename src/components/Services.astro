@@ -2,10 +2,11 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import businessCards from "../assets/business-cards.jpg";
-import stamp from "../assets/stamp.jpg";
+import stamp from "../assets/SELLOS_TRODAT-removebg-preview.png";
 import senaleticaPolystyrene from "../assets/senaletica-acrilico.jpg";
 import talonarios from "../assets/SERVICIOS_PRESENTACION_NEGOCIO.png";
 import pendones from "../assets/PENDON_1-removebg-preview.png";
+import tintas from "../assets/TINTAS-removebg-preview.png";
 ---
 
 <section
@@ -203,7 +204,7 @@ import pendones from "../assets/PENDON_1-removebg-preview.png";
                 <div class="relative h-48 overflow-hidden">
                     <Image
                         src={senaleticaPolystyrene}
-                        alt="Señalética y Polystyrene"
+                        alt="Señalética en Poliestireno y Acrílico"
                         width={600}
                         height={400}
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
@@ -218,7 +219,7 @@ import pendones from "../assets/PENDON_1-removebg-preview.png";
                     <h3
                         class="font-heading text-2xl font-bold mb-3 text-neutral-800"
                     >
-                        Señalética y Polystyrene
+                        Señalética y Comunicación Visual
                     </h3>
                     <p class="font-sans text-neutral-600 text-lg mb-4">
                         Señales informativas, direccionales y decorativas en diversos materiales para identificar y comunicar de manera efectiva.
@@ -236,7 +237,51 @@ import pendones from "../assets/PENDON_1-removebg-preview.png";
                     </a>
                 </div>
             </div>
+
+                        <div
+                class="service-card group overflow-hidden rounded-2xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl"
+            >
+                <div class="relative h-48 overflow-hidden">
+                    <Image
+                        src={tintas}
+                        alt="Tintas y Suministros para Sellos"
+                        width={600}
+                        height={400}
+                        class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <span
+                        class="absolute bottom-4 right-4 bg-white p-3 rounded-full shadow-md text-primary-dark"
+                    >
+                        <Icon name="ink-color" width="24" height="24" />
+                    </span>
+                </div>
+                <div class="p-6">
+                    <h3
+                        class="font-heading text-2xl font-bold mb-3 text-neutral-800"
+                    >
+                        Tintas y Suministros
+                    </h3>
+                    <p class="font-sans text-neutral-600 text-lg mb-4">
+                        Proveemos tintas de alta calidad y suministros para
+                        sellos, asegurando resultados óptimos en cada
+                        impresión.
+                    </p>
+                    <a
+                        href="/servicios/sellos"
+                        class="inline-flex items-center text-primary-dark font-medium"
+                    >
+                        Conocer más <Icon
+                            name="arrow-right"
+                            width="16"
+                            height="16"
+                            class="ml-1 transition-transform group-hover:translate-x-1"
+                        />
+                    </a>
+                </div>
+            </div>
         </div>
+
+
 
         <div class="flex justify-center mt-16">
             <a
