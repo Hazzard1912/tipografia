@@ -4,7 +4,7 @@ import Navbar from "../shared/Navbar.astro";
 import WhatsappButton from "../components/WhatsappButton.astro";
 import "../styles/global.css";
 
-import logo from "../assets/logo.png";
+import logo from "../assets/SELLOS VARIOS 01.png";
 
 interface Props {
 	title?: string;
@@ -23,7 +23,7 @@ const {
 	url = "https://www.albeirohernandez.com/",
 	canonical = "https://www.albeirohernandez.com/",
 	keywords,
-	ogImage = "https://www.albeirohernandez.com/logo.png", // Cambiar a una og-image.jpg si es necesario
+	ogImage = "https://www.albeirohernandez.com/logo.png", // Usar este cuando se despliegue en un dominio real
 } = Astro.props;
 
 const baseKeywords = [

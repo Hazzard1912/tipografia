@@ -13,13 +13,13 @@ import { Image } from "astro:assets";
         style="background-image: url('https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=2071&auto=format&fit=crop'); filter: brightness(0.4);"
     >
     </div>
-    
+
     <!-- Paper texture overlay -->
     <div
         class="absolute inset-0 w-full h-full bg-[url('/paper-texture.jpg')] bg-cover bg-center opacity-20 mix-blend-overlay pointer-events-none"
     >
     </div>
-    
+
     <div
         class="relative z-10 flex flex-col items-center text-center px-6 py-20 gap-8 max-w-5xl mx-auto"
     >
@@ -27,19 +27,20 @@ import { Image } from "astro:assets";
             id="hero-title"
             class="font-heading text-5xl md:text-7xl font-bold text-white drop-shadow-md mb-2 tracking-tight mt-4"
         >
-            Tu Impacto Visual <span class="text-indigo-300">Comienza Aquí.</span>
+            Tu Impacto Visual <span class="text-indigo-300">Comienza Aquí.</span
+            >
         </h1>
         <p
             id="hero-subtitle"
             class="font-sans text-xl md:text-2xl text-gray-100 max-w-3xl mb-10 leading-relaxed"
         >
-            Más de <span class="font-bold text-indigo-300">20</span> años transformando ideas en
-            realidad impresa en el corazón de Cali. Diseño, Tipografía y Litografía
-            de vanguardia para tu negocio.
+            Más de <span class="font-bold text-indigo-300">20</span> años transformando
+            ideas en realidad impresa en el corazón de Cali. Diseño, Tipografía y
+            Litografía de vanguardia para tu negocio.
         </p>
         <div class="flex flex-col sm:flex-row gap-6 justify-center">
             <a
-                href="#contacto"
+                href="#cta-final"
                 id="cta-principal"
                 class="bg-indigo-500 text-white py-4 px-10 rounded-lg text-lg font-bold hover:bg-indigo-600 transition-all duration-300 shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 transform hover:-translate-y-1 relative overflow-hidden"
             >
@@ -59,9 +60,12 @@ import { Image } from "astro:assets";
             "Tu visión impresa. Calidad y experiencia en cada detalle."
         </p>
     </div>
-    
+
     <!-- Decorative elements -->
-    <div class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
+    <div
+        class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-blue-900/50 to-transparent"
+    >
+    </div>
 </section>
 
 <script>
