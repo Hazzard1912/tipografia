@@ -5,6 +5,7 @@ import WhatsappButton from "../components/WhatsappButton.astro";
 import "../styles/global.css";
 
 import logo from "../assets/SELLOS VARIOS 01.png";
+import { ClientRouter } from "astro:transitions";
 
 interface Props {
 	title?: string;
@@ -105,6 +106,8 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 			}
 			`}
 		</script>
+
+		<ClientRouter />
 	</head>
 	<body class="antialiased bg-gray-50 text-gray-900 font-sans">
 		<Navbar />

@@ -1,11 +1,11 @@
 ---
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
-import businessCards from "../assets/business-cards.jpg";
+import businessCards from "../assets/tarjetas.jpg";
 import stamp from "../assets/SELLOS VARIOS 01.png";
-import senaleticaPolystyrene from "../assets/senaletica-acrilico.jpg";
-import talonarios from "../assets/SERVICIOS_PRESENTACION_NEGOCIO.png";
-import pendones from "../assets/PENDON_1-removebg-preview.png";
+import senaleticaPolystyrene from "../assets/senales-acrilico.jpg";
+import talonarios from "../assets/rifas.jpg";
+import pendones from "../assets/multiples-pendones.jpg";
 import tintas from "../assets/TINTAS-removebg-preview.png";
 ---
 
@@ -306,13 +306,13 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                     gsap.from(card, {
                         scrollTrigger: {
                             trigger: card,
-                            start: "top 85%",
+                            start: "top 90%",
                         },
-                        y: 50,
+                        y: 30,
                         opacity: 0,
-                        duration: 0.9,
-                        delay: i * 0.15,
-                        ease: "power3.out",
+                        duration: 0.6,
+                        delay: i * 0.1,
+                        ease: "power2.out",
                     });
                 });
 

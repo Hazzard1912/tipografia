@@ -116,7 +116,7 @@ import logo from "../assets/logo.png";
 </nav>
 
 <script>
-    if (typeof window !== "undefined") {
+    function initNavbar() {
         const toggle = document.getElementById("navbar-toggle");
         const menu = document.getElementById("mobile-menu");
         const navbar = document.getElementById("navbar");
@@ -147,6 +147,14 @@ import logo from "../assets/logo.png";
             }
         });
     }
+
+    // Initialize on page load
+    if (typeof window !== "undefined") {
+        initNavbar();
+    }
+
+    // Re-initialize on view transitions
+    document.addEventListener("astro:page-load", initNavbar);
 </script>
 
 <style>

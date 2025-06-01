@@ -3,9 +3,9 @@ import Layout from "../../layouts/Layout.astro";
 import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-import talonarios from "../../assets/SERVICIOS_PRESENTACION_NEGOCIO.png";
-import tarjetasPresentacion from "../../assets/business-cards.jpg";
-import pendones from "../../assets/X-Banners-8643-removebg-preview.png";
+import talonarios from "../../assets/rifas.jpg";
+import tarjetasPresentacion from "../../assets/tarjetas.jpg";
+import pendones from "../../assets/multiples-pendones.jpg";
 import afiches from "../../assets/a4-paper-flyer-mockup-psd-template.jpg";
 import etiquetas from "../../assets/ETIQUETAS.png";
 import carpetas from "../../assets/carpetas.jpg";
@@ -117,7 +117,7 @@ const etiquetasList = [
                     <Image
                         src={tarjetasPresentacion}
                         alt="Tarjetas de presentación elegantes"
-                        class="w-full h-48 object-cover"
+                        class="w-full h-48 object-contain"
                         width={400}
                         height={192}
                         loading="lazy"
@@ -435,8 +435,8 @@ const etiquetasList = [
                         Impresión de Alta Calidad
                     </h4>
                     <p class="text-gray-600 text-sm">
-                        Utilizamos tecnología de punta para que cada detalle
-                        luzca perfecto y tu marca se vea profesional.
+                        Cuidamos cada detalle en el proceso de impresión para 
+                        garantizar resultados profesionales que realcen tu marca.
                     </p>
                 </div>
                 <div class="text-center">
