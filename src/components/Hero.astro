@@ -20,11 +20,10 @@ import backgroundImage from "../assets/hero-background.avif";
             height={1280}
             loading="eager"
             format="webp"
+            widths={[360,768, 1200, 1920]}
             sizes="(max-width: 768px) 768px, (max-width: 1200px) 1200px, 1920px"
             quality={80}
-            densities={[1, 2]}
         />
-    </div>
 
     <!-- Dark overlay for better contrast -->
     <div class="absolute inset-0 w-full h-full bg-black/40"></div>
@@ -40,7 +39,8 @@ import backgroundImage from "../assets/hero-background.avif";
             height={800}
             loading="lazy"
             format="webp"
-            sizes="100vw"
+            widths={[360, 768, 1200, 1920]}
+            sizes="(max-width: 768px) 768px, (max-width: 1200px) 1200px, 1920px"
             quality={70}
         />
     </div>
