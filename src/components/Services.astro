@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import businessCards from "../assets/tarjetas.jpg";
-import stamp from "../assets/SELLOS VARIOS 01.png";
+import stamp from "../assets/SELLOS VARIOS 01.avif";
 import senaleticaPolystyrene from "../assets/senales-acrilico.jpg";
 import talonarios from "../assets/rifas.jpg";
 import pendones from "../assets/multiples-pendones.jpg";
@@ -35,8 +35,11 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                     <Image
                         src={businessCards}
                         alt="Tarjetas de Presentación"
-                        width={600}
-                        height={400}
+                        width={400}
+                        height={300}
+                        loading="lazy"
+                        format="webp"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -73,7 +76,6 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                     </a>
                 </div>
             </div>
-
             <div
                 class="service-card group overflow-hidden rounded-2xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl"
             >
@@ -81,8 +83,11 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                     <Image
                         src={stamp}
                         alt="Sellos Personalizados"
-                        width={600}
-                        height={400}
+                        width={400}
+                        height={300}
+                        loading="lazy"
+                        format="webp"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -122,8 +127,11 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                     <Image
                         src={talonarios}
                         alt="Talonarios y Formularios"
-                        width={600}
-                        height={400}
+                        width={400}
+                        height={300}
+                        loading="lazy"
+                        format="webp"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -164,8 +172,11 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                     <Image
                         src={pendones}
                         alt="Pendones y Publicidad"
-                        width={600}
-                        height={400}
+                        width={400}
+                        height={300}
+                        loading="lazy"
+                        format="webp"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -205,8 +216,11 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                     <Image
                         src={senaleticaPolystyrene}
                         alt="Señalética en Poliestireno y Acrílico"
-                        width={600}
-                        height={400}
+                        width={400}
+                        height={300}
+                        loading="lazy"
+                        format="webp"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -222,7 +236,9 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                         Señalética y Comunicación Visual
                     </h3>
                     <p class="font-sans text-neutral-600 text-lg mb-4">
-                        Señales informativas, direccionales y decorativas en diversos materiales para identificar y comunicar de manera efectiva.
+                        Señales informativas, direccionales y decorativas en
+                        diversos materiales para identificar y comunicar de
+                        manera efectiva.
                     </p>
                     <a
                         href="/servicios/senaletica/"
@@ -238,15 +254,18 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                 </div>
             </div>
 
-                        <div
+            <div
                 class="service-card group overflow-hidden rounded-2xl shadow-lg bg-white transition-all duration-300 hover:shadow-2xl"
             >
                 <div class="relative h-48 overflow-hidden">
                     <Image
                         src={tintas}
                         alt="Tintas y Suministros para Sellos"
-                        width={600}
-                        height={400}
+                        width={400}
+                        height={300}
+                        loading="lazy"
+                        format="webp"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -263,8 +282,7 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                     </h3>
                     <p class="font-sans text-neutral-600 text-lg mb-4">
                         Proveemos tintas de alta calidad y suministros para
-                        sellos, asegurando resultados óptimos en cada
-                        impresión.
+                        sellos, asegurando resultados óptimos en cada impresión.
                     </p>
                     <a
                         href="/servicios/sellos/"
@@ -280,8 +298,6 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                 </div>
             </div>
         </div>
-
-
 
         <div class="flex justify-center mt-16">
             <a

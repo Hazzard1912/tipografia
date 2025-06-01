@@ -29,107 +29,157 @@ const stats = [
 ];
 ---
 
-<section id="confianza" class="py-24 bg-gradient-to-b from-white via-neutral-50 to-white">
+<section
+    id="confianza"
+    class="py-24 bg-gradient-to-b from-white via-neutral-50 to-white"
+>
     <div class="container mx-auto px-4">
         <!-- Header principal -->
         <div class="max-w-4xl mx-auto text-center mb-16">
-            <div class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
+            <div
+                class="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6"
+            >
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                    <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                        clip-rule="evenodd"></path>
                 </svg>
                 Empresas que confían en nosotros
             </div>
-            
-            <h2 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-dark mb-6">
+
+            <h2
+                class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-dark mb-6"
+            >
                 La confianza se
-                <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <span
+                    class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+                >
                     construye
                 </span>
                 con resultados
             </h2>
-            
-            <p class="text-neutral-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                Empresas de Cali, el Valle del Cauca y Colombia han elegido nuestra experiencia 
-                en tipografía y litografía para materializar sus ideas con la calidad profesional 
-                que sus proyectos merecen.
+
+            <p
+                class="text-neutral-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
+            >
+                Empresas de Cali, el Valle del Cauca y Colombia han elegido
+                nuestra experiencia en tipografía y litografía para materializar
+                sus ideas con la calidad profesional que sus proyectos merecen.
             </p>
         </div>
 
         <!-- Estadísticas -->
         <div class="flex justify-center gap-8 md:gap-16 mb-20">
-            {stats.map((stat) => (
-                <div class="text-center group">
-                    <div class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
-                        <div class="text-4xl md:text-5xl font-bold text-primary mb-3">{stat.number}</div>
-                        <div class="text-neutral-600 font-medium text-lg">{stat.label}</div>
+            {
+                stats.map((stat) => (
+                    <div class="text-center group">
+                        <div class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:-translate-y-1">
+                            <div class="text-4xl md:text-5xl font-bold text-primary mb-3">
+                                {stat.number}
+                            </div>
+                            <div class="text-neutral-600 font-medium text-lg">
+                                {stat.label}
+                            </div>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))
+            }
         </div>
 
         <!-- Logos de clientes -->
         <div class="relative">
             <div class="text-center mb-12">
-                <h3 class="text-2xl md:text-3xl font-bold text-neutral-dark mb-4">
+                <h3
+                    class="text-2xl md:text-3xl font-bold text-neutral-dark mb-4"
+                >
                     Clientes que confían en nuestro trabajo
                 </h3>
                 <p class="text-neutral-600 max-w-2xl mx-auto">
-                    Desde emprendimientos locales hasta empresas consolidadas, brindamos 
-                    soluciones de impresión que superan expectativas y construyen relaciones 
-                    duraderas basadas en la confianza.
+                    Desde emprendimientos locales hasta empresas consolidadas,
+                    brindamos soluciones de impresión que superan expectativas y
+                    construyen relaciones duraderas basadas en la confianza.
                 </p>
             </div>
 
             <!-- Carrusel de logos -->
             <div class="relative overflow-hidden">
-                <div class="logos-track flex gap-12 items-center justify-center">
-                    {clientes.map((cliente, index) => (
-                        <div class="logo-item flex-shrink-0 w-32 h-20 md:w-40 md:h-24 flex items-center justify-center">
-                            <Image
-                                src={cliente.src}
-                                alt={cliente.alt}
-                                class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-                                width={160}
-                                height={96}
-                            />
-                        </div>
-                    ))}
+                <div
+                    class="logos-track flex gap-12 items-center justify-center"
+                >
+                    {
+                        clientes.map((cliente, index) => (
+                            <div class="logo-item flex-shrink-0 w-32 h-20 md:w-40 md:h-24 flex items-center justify-center">
+                                <Image
+                                    src={cliente.src}
+                                    alt={cliente.alt}
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                                    width={160}
+                                    height={96}
+                                    loading="lazy"
+                                    format="webp"
+                                />
+                            </div>
+                        ))
+                    }
                     <!-- Duplicar logos para efecto infinito -->
-                    {clientes.map((cliente, index) => (
-                        <div class="logo-item flex-shrink-0 w-32 h-20 md:w-40 md:h-24 flex items-center justify-center">
-                            <Image
-                                src={cliente.src}
-                                alt={cliente.alt}
-                                class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
-                                width={160}
-                                height={96}
-                            />
-                        </div>
-                    ))}
+                    {
+                        clientes.map((cliente, index) => (
+                            <div class="logo-item flex-shrink-0 w-32 h-20 md:w-40 md:h-24 flex items-center justify-center">
+                                <Image
+                                    src={cliente.src}
+                                    alt={cliente.alt}
+                                    class="max-w-full max-h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100"
+                                    width={160}
+                                    height={96}
+                                    loading="lazy"
+                                    format="webp"
+                                />
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
 
         <!-- Call to action -->
         <div class="mt-20 text-center">
-            <div class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto">
-                <h3 class="text-2xl md:text-3xl font-bold text-neutral-dark mb-4">
+            <div
+                class="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-3xl p-8 md:p-12 max-w-4xl mx-auto"
+            >
+                <h3
+                    class="text-2xl md:text-3xl font-bold text-neutral-dark mb-4"
+                >
                     ¿Listo para ser parte de nuestros clientes satisfechos?
                 </h3>
                 <p class="text-neutral-600 text-lg mb-8 max-w-2xl mx-auto">
-                    Únete a las empresas que han elegido nuestra experiencia en tipografía y 
-                    litografía para hacer realidad sus proyectos más importantes.
+                    Únete a las empresas que han elegido nuestra experiencia en
+                    tipografía y litografía para hacer realidad sus proyectos
+                    más importantes.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a 
-                    href="https://wa.me/573104336900?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio."
-                    class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition-colors group">
+                    <a
+                        href="https://wa.me/573104336900?text=Hola,%20me%20gustaría%20cotizar%20un%20servicio."
+                        class="inline-flex items-center justify-center px-8 py-4 bg-primary text-white font-semibold rounded-full hover:bg-primary/90 transition-colors group"
+                    >
                         Solicitar cotización
-                        <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        <svg
+                            class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                         </svg>
                     </a>
-                    <a href="#servicios" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-colors">
+                    <a
+                        href="#servicios"
+                        class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary font-semibold rounded-full border-2 border-primary hover:bg-primary hover:text-white transition-colors"
+                    >
                         Ver nuestros servicios
                     </a>
                 </div>
@@ -142,11 +192,11 @@ const stats = [
     .logos-track {
         animation: scroll-logos 30s linear infinite;
     }
-    
+
     .logos-track:hover {
         animation-play-state: paused;
     }
-    
+
     @keyframes scroll-logos {
         0% {
             transform: translateX(0);
@@ -155,7 +205,7 @@ const stats = [
             transform: translateX(-50%);
         }
     }
-    
+
     @media (prefers-reduced-motion: reduce) {
         .logos-track {
             animation: none;

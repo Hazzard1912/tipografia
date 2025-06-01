@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import logo from "../assets/logo.png";
 ---
 
@@ -12,10 +13,14 @@ import logo from "../assets/logo.png";
             href="/#inicio"
             class="font-heading text-2xl font-bold text-primary-dark tracking-wide uppercase relative group"
         >
-            <img
-                src={logo.src}
+            <Image
+                src={logo}
                 alt="José Albeiro Hernández Logo"
                 class="h-12 inline-block mr-2"
+                width={120}
+                height={48}
+                loading="eager"
+                format="webp"
             />
         </a>
 

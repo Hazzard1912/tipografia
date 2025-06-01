@@ -4,7 +4,8 @@ import Navbar from "../shared/Navbar.astro";
 import WhatsappButton from "../components/WhatsappButton.astro";
 import "../styles/global.css";
 
-import logo from "../assets/SELLOS VARIOS 01.png";
+import defaultOgImage from "../assets/og-image.avif";
+
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
@@ -24,7 +25,7 @@ const {
 	url = "https://www.litografiaalbeiro.com/",
 	canonical = "https://www.litografiaalbeiro.com/",
 	keywords,
-	ogImage = "https://www.litografiaalbeiro.com/logo.png", // Usar este cuando se despliegue en un dominio real
+	ogImage = defaultOgImage.src, // Usar la imagen importada por defecto
 } = Astro.props;
 
 const baseKeywords = [
@@ -64,7 +65,7 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 		<meta property="og:title" content={metaTitle} />
 		<meta property="og:description" content={description} />
 		<!-- Cambiar a ogImage -->
-		<meta property="og:image" content={logo.src} />
+		<meta property="og:image" content={ogImage} />
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:image:type" content="image/jpeg" />
@@ -75,14 +76,13 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 		<meta property="twitter:title" content={metaTitle} />
 		<meta property="twitter:description" content={description} />
 		<!-- Cambiar a ogImage -->
-		<meta property="twitter:image" content={logo.src} />
+		<meta property="twitter:image" content={ogImage} />
 		<meta property="twitter:image:alt" content="Logo de Imprenta y Litografía Jose Albeiro Hernández" />
 		
-
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonical} />
 
-		<link rel="preload" href="/logo.png" as="image" type="image/svg+xml" />
+		<link rel="preload" href={ogImage} as="image" type="image/jpeg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
@@ -95,7 +95,7 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 				"@type": "Organization",
 				"name": "Litografía y Tipografía Jose Albeiro Hernández",
 				"url": "https://www.litografiaalbeiro.com/",
-				"logo": "https://www.litografiaalbeiro.com/logo.png",
+				"logo": "https://www.litografiaalbeiro.com/og-image.avif",
 				"contactPoint": [{
 					"@type": "ContactPoint",
 					"telephone": "+57-310-433-6900",

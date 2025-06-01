@@ -1,6 +1,7 @@
 ---
-import { Icon } from 'astro-icon/components';
-import logo from '../assets/logo.png';
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import logo from "../assets/logo.png";
 ---
 
 <footer class="bg-neutral-light border-t border-neutral/20 py-12">
@@ -9,37 +10,63 @@ import logo from '../assets/logo.png';
             <!-- Brand & Slogan -->
             <div>
                 <a href="/" class="flex items-center mb-6">
-                    <img src={logo.src} alt="José Albeiro Hernández Logo" class="h-16 w-auto mr-3" />
+                    <Image
+                        src={logo}
+                        alt="José Albeiro Hernández Logo"
+                        width={120}
+                        height={64}
+                        loading="lazy"
+                        format="webp"
+                        class="h-16 w-auto mr-3"
+                    />
                 </a>
                 <p class="font-sans text-lg mb-3 text-neutral-dark/90">
                     Tipografía & Litografía en Cali
                 </p>
-                <p class="font-sans text-sm text-neutral/80 leading-relaxed max-w-xs">
+                <p
+                    class="font-sans text-sm text-neutral/80 leading-relaxed max-w-xs"
+                >
                     Tu visión impresa. Calidad y experiencia en cada detalle.
                 </p>
             </div>
 
             <!-- Navegación -->
             <div>
-                <h4 class="font-heading text-lg font-bold mb-5 text-neutral-dark">Navegación</h4>
+                <h4
+                    class="font-heading text-lg font-bold mb-5 text-neutral-dark"
+                >
+                    Navegación
+                </h4>
                 <ul class="flex flex-col gap-3 font-sans text-neutral-dark/80">
                     <li>
-                        <a href="/#inicio" class="hover:text-primary transition-colors">
+                        <a
+                            href="/#inicio"
+                            class="hover:text-primary transition-colors"
+                        >
                             Inicio
                         </a>
                     </li>
                     <li>
-                        <a href="/servicios/" class="hover:text-primary transition-colors">
+                        <a
+                            href="/servicios/"
+                            class="hover:text-primary transition-colors"
+                        >
                             Servicios
                         </a>
                     </li>
                     <li>
-                        <a href="/#por-que-elegirnos" class="hover:text-primary transition-colors">
+                        <a
+                            href="/#por-que-elegirnos"
+                            class="hover:text-primary transition-colors"
+                        >
                             Nosotros
                         </a>
                     </li>
                     <li>
-                        <a href="/#cta-final" class="hover:text-primary transition-colors">
+                        <a
+                            href="/#cta-final"
+                            class="hover:text-primary transition-colors"
+                        >
                             Contacto
                         </a>
                     </li>
@@ -48,39 +75,54 @@ import logo from '../assets/logo.png';
 
             <!-- Contacto -->
             <div>
-                <h4 class="font-heading text-lg font-bold mb-5 text-neutral-dark">Contacto</h4>
+                <h4
+                    class="font-heading text-lg font-bold mb-5 text-neutral-dark"
+                >
+                    Contacto
+                </h4>
                 <div class="flex items-center gap-3 mb-4">
                     <Icon name="phone" size={18} class="text-primary" />
-                    <span class="font-sans text-neutral-dark/80">+57 310 433 6900</span>
+                    <span class="font-sans text-neutral-dark/80"
+                        >+57 310 433 6900</span
+                    >
                 </div>
                 <div class="flex items-center gap-3 mb-4">
                     <Icon name="envelope" size={18} class="text-primary" />
                     <span class="font-sans text-neutral-dark/80">
-                        <a href="mailto:jalbeiro-007@hotmail.com"
-                            class="hover:text-primary transition-colors">
+                        <a
+                            href="mailto:jalbeiro-007@hotmail.com"
+                            class="hover:text-primary transition-colors"
+                        >
                             jalbeiro-007@hotmail.com
                         </a>
                     </span>
                 </div>
                 <div class="flex items-center gap-3 mb-4">
                     <Icon name="map-marker" size={18} class="text-primary" />
-                    <span class="font-sans text-neutral-dark/80 text-sm">Cra. 4 #20-12/14, San Nicolás, Cali</span>
+                    <span class="font-sans text-neutral-dark/80 text-sm"
+                        >Cra. 4 #20-12/14, San Nicolás, Cali</span
+                    >
                 </div>
-                <a 
+                <a
                     href="https://wa.me/573104336900?text=Hola,%20me%20gustaría%20más%20información."
                     target="_blank"
                     rel="noopener"
                     class="inline-flex items-center gap-3 px-4 py-2 mt-2 border border-green-500/30 rounded-md hover:bg-green-500/5 transition-colors"
                 >
                     <Icon name="whatsapp" size={18} class="text-secondary" />
-                    <span class="font-sans text-sm text-neutral-dark/90">Escríbenos por WhatsApp</span>
+                    <span class="font-sans text-sm text-neutral-dark/90"
+                        >Escríbenos por WhatsApp</span
+                    >
                 </a>
             </div>
         </div>
-        
-        <div class="border-t border-neutral/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+        <div
+            class="border-t border-neutral/20 pt-6 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
             <div class="text-sm text-neutral/70 font-sans">
-                © José Albeiro Hernández {new Date().getFullYear()}. Todos los derechos reservados.
+                © José Albeiro Hernández {new Date().getFullYear()}. Todos los
+                derechos reservados.
             </div>
         </div>
     </div>
