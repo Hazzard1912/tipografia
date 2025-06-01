@@ -28,6 +28,6 @@ export default defineConfig({
     remotePatterns: [],
     service: {
       entrypoint: 'astro/assets/services/sharp'
-    }
+    },
   }
 });

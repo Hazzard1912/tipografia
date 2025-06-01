@@ -40,6 +40,7 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                         loading="lazy"
                         format="webp"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={85}
                         class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -88,6 +89,7 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                         loading="lazy"
                         format="webp"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={85}
                         class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -177,6 +179,7 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                         loading="lazy"
                         format="webp"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={85}
                         class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -221,6 +224,7 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                         loading="lazy"
                         format="webp"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={85}
                         class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -266,6 +270,7 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                         loading="lazy"
                         format="webp"
                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={85}
                         class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110"
                     />
                     <span
@@ -318,43 +323,47 @@ import tintas from "../assets/TINTAS-removebg-preview.png";
                 gsap.registerPlugin(ScrollTrigger);
 
                 // Card animation on scroll
-                gsap.utils.toArray(".service-card").forEach((card, i) => {
-                    gsap.from(card, {
-                        scrollTrigger: {
-                            trigger: card,
-                            start: "top 90%",
-                        },
-                        y: 30,
-                        opacity: 0,
-                        duration: 0.6,
-                        delay: i * 0.1,
-                        ease: "power2.out",
+                gsap.utils
+                    .toArray<HTMLElement>(".service-card")
+                    .forEach((card, i) => {
+                        gsap.from(card, {
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 90%",
+                            },
+                            y: 30,
+                            opacity: 0,
+                            duration: 0.6,
+                            delay: i * 0.1,
+                            ease: "power2.out",
+                        });
                     });
-                });
 
                 // Image hover effect
-                gsap.utils.toArray(".service-card").forEach((card) => {
-                    const image = card.querySelector("img");
-                    const icon = card.querySelector(".absolute span");
+                gsap.utils
+                    .toArray<HTMLElement>(".service-card")
+                    .forEach((card) => {
+                        const image = card.querySelector("img");
+                        const icon = card.querySelector(".absolute span");
 
-                    card.addEventListener("mouseenter", () => {
-                        gsap.to(icon, {
-                            scale: 1.15,
-                            rotate: 8,
-                            duration: 0.3,
-                            ease: "power1.out",
+                        card.addEventListener("mouseenter", () => {
+                            gsap.to(icon, {
+                                scale: 1.15,
+                                rotate: 8,
+                                duration: 0.3,
+                                ease: "power1.out",
+                            });
+                        });
+
+                        card.addEventListener("mouseleave", () => {
+                            gsap.to(icon, {
+                                scale: 1,
+                                rotate: 0,
+                                duration: 0.3,
+                                ease: "power1.in",
+                            });
                         });
                     });
-
-                    card.addEventListener("mouseleave", () => {
-                        gsap.to(icon, {
-                            scale: 1,
-                            rotate: 0,
-                            duration: 0.3,
-                            ease: "power1.in",
-                        });
-                    });
-                });
             });
         });
     }

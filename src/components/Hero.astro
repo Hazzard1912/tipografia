@@ -16,22 +16,32 @@ import backgroundImage from "../assets/hero-background.avif";
             src={backgroundImage}
             alt="fondo hero"
             class="w-full h-full object-cover"
+            width={1920}
+            height={1280}
             loading="eager"
             format="webp"
+            sizes="(max-width: 768px) 768px, (max-width: 1200px) 1200px, 1920px"
+            quality={80}
+            densities={[1, 2]}
         />
     </div>
 
     <!-- Dark overlay for better contrast -->
     <div class="absolute inset-0 w-full h-full bg-black/40"></div>
-
     <!-- Paper texture overlay -->
-    <div class="absolute inset-0 w-full h-full opacity-15 mix-blend-soft-light pointer-events-none">
+    <div
+        class="absolute inset-0 w-full h-full opacity-15 mix-blend-soft-light pointer-events-none"
+    >
         <Image
             src={paperTexture}
             alt="textura de papel"
             class="w-full h-full object-cover"
+            width={1200}
+            height={800}
             loading="lazy"
             format="webp"
+            sizes="100vw"
+            quality={70}
         />
     </div>
 
