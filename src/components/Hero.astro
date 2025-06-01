@@ -20,95 +20,97 @@ import backgroundImage from "../assets/hero-background.avif";
             height={1280}
             loading="eager"
             format="webp"
-            widths={[360,768, 1200, 1920]}
-            sizes="(max-width: 768px) 768px, (max-width: 1200px) 1200px, 1920px"
-            quality={80}
-        />
-
-    <!-- Dark overlay for better contrast -->
-    <div class="absolute inset-0 w-full h-full bg-black/40"></div>
-    <!-- Paper texture overlay -->
-    <div
-        class="absolute inset-0 w-full h-full opacity-15 mix-blend-soft-light pointer-events-none"
-    >
-        <Image
-            src={paperTexture}
-            alt="textura de papel"
-            class="w-full h-full object-cover"
-            width={1200}
-            height={800}
-            loading="lazy"
-            format="webp"
             widths={[360, 768, 1200, 1920]}
             sizes="(max-width: 768px) 768px, (max-width: 1200px) 1200px, 1920px"
             quality={70}
         />
-    </div>
 
-    <div
-        class="relative z-10 flex flex-col items-center text-center px-6 py-20 gap-8 max-w-5xl mx-auto"
-    >
-        <h1
-            id="hero-title"
-            class="font-heading text-5xl md:text-7xl font-bold text-white drop-shadow-md mb-2 tracking-tight mt-4"
+        <!-- Dark overlay for better contrast -->
+        <div class="absolute inset-0 w-full h-full bg-black/40"></div>
+        <!-- Paper texture overlay -->
+        <div
+            class="absolute inset-0 w-full h-full opacity-15 mix-blend-soft-light pointer-events-none"
         >
-            Tu Impacto Visual <span class="text-indigo-300">Comienza Aquí.</span
-            >
-        </h1>
-        <p
-            id="hero-subtitle"
-            class="font-sans text-xl md:text-2xl text-gray-100 max-w-3xl mb-10 leading-relaxed"
-        >
-            Más de <span class="font-bold text-indigo-300">20</span> años transformando
-            ideas en realidad impresa en el corazón de Cali. Diseño, Tipografía y
-            Litografía de vanguardia para tu negocio.
-        </p>
-        <div class="flex flex-col sm:flex-row gap-6 justify-center">
-            <a
-                href="#cta-final"
-                id="cta-principal"
-                class="bg-indigo-500 text-white py-4 px-10 rounded-lg text-lg font-bold hover:bg-indigo-600 transition-all duration-300 shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 transform hover:-translate-y-1 relative overflow-hidden"
-            >
-                Cotiza tu Proyecto Ahora
-                <span
-                    class="absolute left-0 top-0 w-full h-full pointer-events-none opacity-0 transition-opacity duration-300"
-                    id="cta-glow"></span>
-            </a>
-            <a
-                href="#servicios"
-                class="text-white border-2 border-white py-4 px-10 rounded-lg text-lg hover:bg-white hover:text-indigo-800 transition-all duration-300 transform hover:-translate-y-1"
-            >
-                Explora Nuestros Servicios
-            </a>
+            <Image
+                src={paperTexture}
+                alt="textura de papel"
+                class="w-full h-full object-cover"
+                width={1200}
+                height={800}
+                loading="lazy"
+                format="webp"
+                widths={[360, 768, 1200]}
+                sizes="(max-width: 768px) 768px, 1200px"
+                quality={70}
+            />
         </div>
-        <p class="mt-10 text-indigo-200 italic text-lg font-light">
-            "Tu visión impresa. Calidad y experiencia en cada detalle."
-        </p>
+
+        <div
+            class="relative z-10 flex flex-col items-center text-center px-6 py-20 gap-8 max-w-5xl mx-auto"
+        >
+            <h1
+                id="hero-title"
+                class="font-heading text-5xl md:text-7xl font-bold text-white drop-shadow-md mb-2 tracking-tight mt-4"
+            >
+                Tu Impacto Visual <span class="text-indigo-300"
+                    >Comienza Aquí.</span
+                >
+            </h1>
+            <p
+                id="hero-subtitle"
+                class="font-sans text-xl md:text-2xl text-gray-100 max-w-3xl mb-10 leading-relaxed"
+            >
+                Más de <span class="font-bold text-indigo-300">20</span> años transformando
+                ideas en realidad impresa en el corazón de Cali. Diseño, Tipografía
+                y Litografía de vanguardia para tu negocio.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a
+                    href="#cta-final"
+                    id="cta-principal"
+                    class="bg-indigo-500 text-white py-4 px-10 rounded-lg text-lg font-bold hover:bg-indigo-600 transition-all duration-300 shadow-xl focus:outline-none focus:ring-4 focus:ring-indigo-300 transform hover:-translate-y-1 relative overflow-hidden"
+                >
+                    Cotiza tu Proyecto Ahora
+                    <span
+                        class="absolute left-0 top-0 w-full h-full pointer-events-none opacity-0 transition-opacity duration-300"
+                        id="cta-glow"></span>
+                </a>
+                <a
+                    href="#servicios"
+                    class="text-white border-2 border-white py-4 px-10 rounded-lg text-lg hover:bg-white hover:text-indigo-800 transition-all duration-300 transform hover:-translate-y-1"
+                >
+                    Explora Nuestros Servicios
+                </a>
+            </div>
+            <p class="mt-10 text-indigo-200 italic text-lg font-light">
+                "Tu visión impresa. Calidad y experiencia en cada detalle."
+            </p>
+        </div>
+
+        <!-- Decorative elements -->
+        <div
+            class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-blue-900/50 to-transparent"
+        >
+        </div>
     </div>
 
-    <!-- Decorative elements -->
-    <div
-        class="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-blue-900/50 to-transparent"
-    >
-    </div>
+    <script>
+        if (typeof window !== "undefined") {
+            import("gsap").then(({ default: gsap }) => {
+                gsap.from("#hero-title", {
+                    y: 60,
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: "power3.out",
+                });
+                gsap.from("#hero-subtitle", {
+                    y: 40,
+                    opacity: 0,
+                    duration: 1,
+                    delay: 0.4,
+                    ease: "power3.out",
+                });
+            });
+        }
+    </script>
 </section>
-
-<script>
-    if (typeof window !== "undefined") {
-        import("gsap").then(({ default: gsap }) => {
-            gsap.from("#hero-title", {
-                y: 60,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power3.out",
-            });
-            gsap.from("#hero-subtitle", {
-                y: 40,
-                opacity: 0,
-                duration: 1,
-                delay: 0.4,
-                ease: "power3.out",
-            });
-        });
-    }
-</script>
