@@ -14,14 +14,15 @@ import logo from "../assets/logo.png";
             class="flex items-center"
         >
             <Image
-            src={logo}
-            alt="José Albeiro Hernández Logo"
-            class="h-12 w-auto object-contain"
-            width={200}
-            height={100}
-            quality={100}
-            loading="eager"
-            format="webp"
+                src={logo}
+                alt="José Albeiro Hernández Logo"
+                class="w-36 h-14"
+                width="500"
+                height="500"
+                format="webp"
+                loading="eager"
+                decoding="async"
+                fetchpriority="high"
             />
         </a>
 
@@ -122,45 +123,43 @@ import logo from "../assets/logo.png";
 </nav>
 
 <script>
-    function initNavbar() {
-        const toggle = document.getElementById("navbar-toggle");
-        const menu = document.getElementById("mobile-menu");
-        const navbar = document.getElementById("navbar");
+    // Mobile menu functionality
+    const toggle = document.getElementById("navbar-toggle");
+    const menu = document.getElementById("mobile-menu");
+    const navbar = document.getElementById("navbar");
 
-        // Toggle mobile menu
-        if (toggle && menu) {
-            toggle.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
-            });
+    // Toggle mobile menu
+    toggle?.addEventListener("click", () => {
+        menu?.classList.toggle("hidden");
+    });
 
-            menu.querySelectorAll("a").forEach((link) => {
-                link.addEventListener("click", () => {
-                    menu.classList.add("hidden");
-                });
-            });
-        }
-
-        // Scroll behavior
-        window.addEventListener("scroll", () => {
-            if (navbar) {
-                if (window.scrollY > 20) {
-                    navbar.classList.add("shadow-md");
-                    navbar.classList.add("bg-white/95");
-                } else {
-                    navbar.classList.remove("shadow-md");
-                    navbar.classList.remove("bg-white/95");
-                }
-            }
+    // Close mobile menu on link click
+    const mobileLinks = menu?.querySelectorAll("a");
+    mobileLinks?.forEach((link) => {
+        link.addEventListener("click", () => {
+            menu?.classList.add("hidden");
         });
-    }
+    });
 
-    // Initialize on page load
-    if (typeof window !== "undefined") {
-        initNavbar();
-    }
+    // Close mobile menu on resize
+    window.addEventListener("resize", () => {
+        if (window.innerWidth >= 768) {
+            menu?.classList.add("hidden");
+        }
+    });
 
-    // Re-initialize on view transitions
-    document.addEventListener("astro:page-load", initNavbar);
+    // Navbar scroll behavior
+    window.addEventListener("scroll", () => {
+        if (navbar) {
+            if (window.scrollY > 20) {
+                navbar.classList.add("shadow-md");
+                navbar.classList.add("bg-white/95");
+            } else {
+                navbar.classList.remove("shadow-md");
+                navbar.classList.remove("bg-white/95");
+            }
+        }
+    });
 </script>
 
 <style>

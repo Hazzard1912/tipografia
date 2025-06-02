@@ -42,8 +42,6 @@ if (currentOgImageSrc.endsWith('.avif')) {
 } else if (currentOgImageSrc.endsWith('.gif')) {
     currentOgImageType = 'image/gif';
 } else {
-    // Si es la imagen por defecto, sabemos que es avif.
-    // Para una imagen personalizada con extensión desconocida, se usa un fallback.
     currentOgImageType = (currentOgImageSrc === defaultOgImage.src) ? 'image/avif' : 'image/jpeg'; 
 }
 
@@ -85,6 +83,7 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 		<meta property="og:description" content={description} />
 		<!-- Cambiar a ogImage -->
 		<meta property="og:image" content={currentOgImageSrc} />
+		
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
 		<meta property="og:image:type" content={currentOgImageType} />
@@ -104,7 +103,7 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 		<link rel="preload" href={currentOgImageSrc} as="image" type={currentOgImageType} />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
 		<!-- Schema.org structured data -->		<script type="application/ld+json">
 			{`
@@ -113,7 +112,7 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 				"@type": "Organization",
 				"name": "Litografía y Tipografía Jose Albeiro Hernández",
 				"url": "https://www.litografiaalbeiro.com/",
-				"logo": "${new URL(defaultOgImage.src, url).toString()}",
+				"logo": "https://www.litografiaalbeiro.com/og-image.avif",
 				"contactPoint": [{
 					"@type": "ContactPoint",
 					"telephone": "+57-310-433-6900",
