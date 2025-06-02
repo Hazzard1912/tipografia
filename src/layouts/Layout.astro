@@ -4,8 +4,6 @@ import Navbar from "../shared/Navbar.astro";
 import WhatsappButton from "../components/WhatsappButton.astro";
 import "../styles/global.css";
 
-import defaultOgImage from "../assets/og-image.avif";
-
 import { ClientRouter } from "astro:transitions";
 
 interface Props {
@@ -25,25 +23,8 @@ const {
 	url = "https://www.litografiaalbeiro.com/",
 	canonical = "https://www.litografiaalbeiro.com/",
 	keywords,
-	ogImage: ogImageFromProps, // Renombrado para claridad
+	ogImage = "https://www.litografiaalbeiro.com/og-image.avif", // Imagen por defecto
 } = Astro.props;
-
-const currentOgImageSrc = ogImageFromProps || defaultOgImage.src;
-let currentOgImageType;
-
-if (currentOgImageSrc.endsWith('.avif')) {
-    currentOgImageType = 'image/avif';
-} else if (currentOgImageSrc.endsWith('.webp')) {
-    currentOgImageType = 'image/webp';
-} else if (currentOgImageSrc.endsWith('.png')) {
-    currentOgImageType = 'image/png';
-} else if (currentOgImageSrc.endsWith('.jpg') || currentOgImageSrc.endsWith('.jpeg')) {
-    currentOgImageType = 'image/jpeg';
-} else if (currentOgImageSrc.endsWith('.gif')) {
-    currentOgImageType = 'image/gif';
-} else {
-    currentOgImageType = (currentOgImageSrc === defaultOgImage.src) ? 'image/avif' : 'image/jpeg'; 
-}
 
 const baseKeywords = [
 	"imprenta Cali",
@@ -82,11 +63,11 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 		<meta property="og:title" content={metaTitle} />
 		<meta property="og:description" content={description} />
 		<!-- Cambiar a ogImage -->
-		<meta property="og:image" content={currentOgImageSrc} />
+		<meta property="og:image" content="/og-image.avif" />
 		
 		<meta property="og:image:width" content="1200" />
 		<meta property="og:image:height" content="630" />
-		<meta property="og:image:type" content={currentOgImageType} />
+		<meta property="og:image:type" content="/og-image.avif" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -94,13 +75,13 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 		<meta property="twitter:title" content={metaTitle} />
 		<meta property="twitter:description" content={description} />
 		<!-- Cambiar a ogImage -->
-		<meta property="twitter:image" content={currentOgImageSrc} />
+		<meta property="twitter:image" content="/og-image.avif" />
 		<meta property="twitter:image:alt" content="Logo de Imprenta y Litografía Jose Albeiro Hernández" />
 		
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonical} />
 
-		<link rel="preload" href={currentOgImageSrc} as="image" type={currentOgImageType} />
+		<link rel="preload" href="/og-image.avif" as="image"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
