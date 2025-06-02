@@ -1,7 +1,5 @@
 ---
 import { Image } from "astro:assets";
-
-import paperTexture from "../assets/paper-texture.webp";
 import backgroundImage from "../assets/hero-background.avif";
 ---
 
@@ -16,13 +14,8 @@ import backgroundImage from "../assets/hero-background.avif";
             src={backgroundImage}
             alt="Fonde moderno de diseño gráfico"
             class="w-full h-full object-cover"
-            width={1920}
-            height={1080}
             loading="eager"
-            decoding="async"
-            format="webp"
-            sizes="(max-width: 768px) 100vw, 1920px"
-            quality={70}
+            quality="mid"
             fetchpriority="high"
         />
     </div>

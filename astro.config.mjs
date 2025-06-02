@@ -23,11 +23,4 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
-  image: {
-    domains: [],
-    remotePatterns: [],
-    service: {
-      entrypoint: 'astro/assets/services/sharp'
-    },
-  }
 });
