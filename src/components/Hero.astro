@@ -1,5 +1,5 @@
 ---
-import { Image } from "astro:assets";
+import { Picture } from "astro:assets";
 import backgroundImage from "../assets/hero-background.avif";
 ---
 
@@ -10,10 +10,12 @@ import backgroundImage from "../assets/hero-background.avif";
 >
     <!-- Modern background with overlay -->
     <div class="absolute inset-0 w-full h-full opacity-30">
-        <Image
+        <Picture
             src={backgroundImage}
-            alt="Fonde moderno de diseño gráfico"
+            alt="Fondo moderno de diseño gráfico"
             class="w-full h-full object-cover"
+            widths={[480, 768, 1024, 1280, 1536, 1920]}
+            sizes="100vw"
             loading="eager"
             quality="mid"
             fetchpriority="high"
