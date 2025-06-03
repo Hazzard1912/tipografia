@@ -69,27 +69,3 @@ import backgroundImage from "../assets/hero-background.avif";
     >
     </div>
 </section>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        if (typeof window !== "undefined") {
-            import("gsap").then(({ default: gsap }) => {
-                gsap.from("#hero-title", {
-                    y: 60,
-                    opacity: 0,
-                    duration: 1.2,
-                    ease: "power3.out",
-                });
-                gsap.from("#hero-subtitle", {
-                    y: 40,
-                    opacity: 0,
-                    duration: 1,
-                    delay: 0.4,
-                    ease: "power3.out",
-                });
-            }).catch(err => {
-                console.error("Error loading GSAP:", err);
-            });
-        }
-    });
-</script>
