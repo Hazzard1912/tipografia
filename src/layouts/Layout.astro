@@ -81,13 +81,12 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 		<!-- Canonical URL -->
 		<link rel="canonical" href={canonical} />
 
-		<link rel="preload" href="/og-image.avif" as="image"/>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
 
-		<!-- Schema.org structured data -->		<script type="application/ld+json">
-			{`
+		<!-- Schema.org structured data -->		
+		<script type="application/ld+json" is:inline>
 			{
 				"@context": "https://schema.org",
 				"@type": "Organization",
@@ -102,7 +101,6 @@ const allKeywords = [...new Set([...baseKeywords, ...(keywords || [])])];
 					"availableLanguage": ["Spanish"]
 				}]
 			}
-			`}
 		</script>
 
 		<ClientRouter />

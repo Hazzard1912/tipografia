@@ -7,19 +7,18 @@ import backgroundImage from "../assets/hero-background.avif";
 <section
     class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-r from-slate-900 to-black/90"
     id="inicio"
->
-    <!-- Modern background with overlay -->
+>    <!-- Modern background with overlay -->
     <div class="absolute inset-0 w-full h-full opacity-30">
         <Picture
             src={backgroundImage}
             alt="Fondo moderno de diseño gráfico"
             class="w-full h-full object-cover"
-            widths={[480, 768, 1024, 1280, 1536, 1920]}
-            sizes="100vw"
+            widths={[320, 640, 1280, 1920]}
             loading="eager"
-            quality="mid"
             fetchpriority="high"
             formats={["avif", "webp"]}
+            quality="high"
+            decoding="sync"
         />
     </div>
 
@@ -72,21 +71,25 @@ import backgroundImage from "../assets/hero-background.avif";
 </section>
 
 <script>
-    if (typeof window !== "undefined") {
-        import("gsap").then(({ default: gsap }) => {
-            gsap.from("#hero-title", {
-                y: 60,
-                opacity: 0,
-                duration: 1.2,
-                ease: "power3.out",
+    document.addEventListener('DOMContentLoaded', () => {
+        if (typeof window !== "undefined") {
+            import("gsap").then(({ default: gsap }) => {
+                gsap.from("#hero-title", {
+                    y: 60,
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: "power3.out",
+                });
+                gsap.from("#hero-subtitle", {
+                    y: 40,
+                    opacity: 0,
+                    duration: 1,
+                    delay: 0.4,
+                    ease: "power3.out",
+                });
+            }).catch(err => {
+                console.error("Error loading GSAP:", err);
             });
-            gsap.from("#hero-subtitle", {
-                y: 40,
-                opacity: 0,
-                duration: 1,
-                delay: 0.4,
-                ease: "power3.out",
-            });
-        });
-    }
+        }
+    });
 </script>

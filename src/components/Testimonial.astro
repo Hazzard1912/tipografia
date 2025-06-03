@@ -70,7 +70,7 @@ const stats = [
         </div>
 
         <!-- Estadísticas -->
-        <div class="flex justify-center gap-8 md:gap-16 mb-20">
+        <div class="estadisticas flex justify-center gap-8 md:gap-16 mb-20">
             {
                 stats.map((stat) => (
                     <div class="text-center group">
@@ -216,42 +216,46 @@ const stats = [
 <script>
     if (typeof window !== "undefined") {
         import("gsap").then(({ default: gsap }) => {
-            // Animación de entrada para las estadísticas
-            gsap.from(".flex > div", {
-                scrollTrigger: {
-                    trigger: "#confianza",
-                    start: "top 80%",
-                },
-                y: 50,
-                opacity: 0,
-                duration: 0.8,
-                stagger: 0.2,
-                ease: "power3.out",
-            });
+            import("gsap/ScrollTrigger").then(({ default: ScrollTrigger }) => {
+                gsap.registerPlugin(ScrollTrigger);
 
-            // Animación para el contenido principal
-            gsap.from("#confianza h2", {
-                scrollTrigger: {
-                    trigger: "#confianza",
-                    start: "top 80%",
-                },
-                y: 30,
-                opacity: 0,
-                duration: 0.8,
-                ease: "power3.out",
-            });
+                // Animación de entrada para las estadísticas
+                gsap.from(".estadisticas > div", {
+                    scrollTrigger: {
+                        trigger: "#confianza",
+                        start: "top 80%",
+                    },
+                    y: 50,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.2,
+                    ease: "power3.out",
+                });
 
-            // Animación para los logos
-            gsap.from(".logo-item", {
-                scrollTrigger: {
-                    trigger: ".logos-track",
-                    start: "top 90%",
-                },
-                y: 30,
-                opacity: 0,
-                duration: 0.6,
-                stagger: 0.05,
-                ease: "power3.out",
+                // Animación para el contenido principal
+                gsap.from("#confianza h2", {
+                    scrollTrigger: {
+                        trigger: "#confianza",
+                        start: "top 80%",
+                    },
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.8,
+                    ease: "power3.out",
+                });
+
+                // Animación para los logos
+                gsap.from(".logo-item", {
+                    scrollTrigger: {
+                        trigger: ".logos-track",
+                        start: "top 90%",
+                    },
+                    y: 30,
+                    opacity: 0,
+                    duration: 0.6,
+                    stagger: 0.05,
+                    ease: "power3.out",
+                });
             });
         });
     }

@@ -16,11 +16,10 @@ import logo from "../assets/logo.png";
             <Image
                 src={logo}
                 alt="José Albeiro Hernández Logo"
-                class="h-12 w-auto object-contain"
-                width={300}
-                height={100}
+                width={150}
                 quality="high"
                 loading="eager"
+                layout="fixed"
                 fetchpriority="high"
             />
         </a>
@@ -122,42 +121,44 @@ import logo from "../assets/logo.png";
 </nav>
 
 <script>
-    // Mobile menu functionality
-    const toggle = document.getElementById("navbar-toggle");
-    const menu = document.getElementById("mobile-menu");
-    const navbar = document.getElementById("navbar");
+    document.addEventListener('astro:page-load', () => {
+        // Mobile menu functionality
+        const toggle = document.getElementById("navbar-toggle");
+        const menu = document.getElementById("mobile-menu");
+        const navbar = document.getElementById("navbar");
 
-    // Toggle mobile menu
-    toggle?.addEventListener("click", () => {
-        menu?.classList.toggle("hidden");
-    });
-
-    // Close mobile menu on link click
-    const mobileLinks = menu?.querySelectorAll("a");
-    mobileLinks?.forEach((link) => {
-        link.addEventListener("click", () => {
-            menu?.classList.add("hidden");
+        // Toggle mobile menu
+        toggle?.addEventListener("click", () => {
+            menu?.classList.toggle("hidden");
         });
-    });
 
-    // Close mobile menu on resize
-    window.addEventListener("resize", () => {
-        if (window.innerWidth >= 768) {
-            menu?.classList.add("hidden");
-        }
-    });
+        // Close mobile menu on link click
+        const mobileLinks = menu?.querySelectorAll("a");
+        mobileLinks?.forEach((link) => {
+            link.addEventListener("click", () => {
+                menu?.classList.add("hidden");
+            });
+        });
 
-    // Navbar scroll behavior
-    window.addEventListener("scroll", () => {
-        if (navbar) {
-            if (window.scrollY > 20) {
-                navbar.classList.add("shadow-md");
-                navbar.classList.add("bg-white/95");
-            } else {
-                navbar.classList.remove("shadow-md");
-                navbar.classList.remove("bg-white/95");
+        // Close mobile menu on resize
+        window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+                menu?.classList.add("hidden");
             }
-        }
+        });
+
+        // Navbar scroll behavior
+        window.addEventListener("scroll", () => {
+            if (navbar) {
+                if (window.scrollY > 20) {
+                    navbar.classList.add("shadow-md");
+                    navbar.classList.add("bg-white/95");
+                } else {
+                    navbar.classList.remove("shadow-md");
+                    navbar.classList.remove("bg-white/95");
+                }
+            }
+        });
     });
 </script>
 

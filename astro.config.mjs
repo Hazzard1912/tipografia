@@ -23,4 +23,7 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+  experimental: {
+    responsiveImages: true,
+  }
 });
